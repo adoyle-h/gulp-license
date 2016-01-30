@@ -1,15 +1,27 @@
 'use strict';
-var defaults = require('defaults'),
-		through = require('through2'),
-		licenses = require('./lib/licenses'),
-		prefixStream = require('./lib/prefixStream');
+var defaults = require('defaults');
+var through = require('through2');
+var licenses = require('./lib/licenses');
+var prefixStream = require('./lib/prefixStream');
 
 module.exports = function(type, options) {
-
 	var opts = defaults(options, {
-		year: new Date().getFullYear(),
 		license: type
 	});
+
+	var currentYear = new Date().getFullYear();
+	if (options.sinceYear) {
+		if (Number(currentYear) <= Number(options.sinceYear)) {
+			opts.year = currentYear;
+		} else {
+			opts.year = options.sinceYear + '-' + currentYear;
+		}
+	} else if (options.year) {
+		opts.year = options.year;
+	} else {
+		opts.year = currentYear;
+	}
+
 	var licenseKey = options.tiny ? 'tiny' : type.toLowerCase();
 
 	function license(file, encoding, callback) {
