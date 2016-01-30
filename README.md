@@ -1,17 +1,19 @@
-# gulp-license [![Build Status](http://img.shields.io/travis/terinjokes/gulp-license.svg?style=flat)](https://travis-ci.org/terinjokes/gulp-license) [![](http://img.shields.io/npm/dm/gulp-license.svg?style=flat)](https://www.npmjs.org/package/gulp-license) [![](http://img.shields.io/npm/v/gulp-license.svg?style=flat)](https://www.npmjs.org/package/gulp-license) [![](http://img.shields.io/codeclimate/github/terinjokes/gulp-license.svg?style=flat)](https://codeclimate.com/github/terinjokes/gulp-license) [![](http://img.shields.io/codeclimate/coverage/github/terinjokes/gulp-license.svg?style=flat)](https://codeclimate.com/github/terinjokes/gulp-license)
+# gulp-license
 
 > Add licenses to gulp stream.
+
+> fork from https://github.com/terinjokes/gulp-license
 
 ## Installation
 
 Install this package with npm and add it to your development dependencies:
 
-`npm install --save-dev gulp-license`
+`npm install --save-dev a-gulp-license`
 
 ## Usage
 
 ```javascript
-var license = require('gulp-license');
+var license = require('a-gulp-license');
 
 gulp.task('license', function() {
   gulp.src('./lib/*.js')

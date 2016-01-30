@@ -1,7 +1,7 @@
 {
-  "name": "gulp-license",
+  "name": "a-gulp-license",
   "description": "Add licenses to gulp streams.",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "author": "Terin Stock <terinjokes@gmail.com>",
   "bugs": "https://github.com/terinjokes/gulp-license/issues",
   "dependencies": {
@@ -28,13 +28,10 @@
     "lib",
     "test"
   ],
-  "homepage": "http://terinjokes.github.io/gulp-license/",
-  "keywords": [
-    "gulpplugin"
-  ],
+  "homepage": "https://github.com/adoyle-h/gulp-license/",
   "license": "MIT",
   "main": "index.js",
-  "repository": "https://github.com/terinjokes/gulp-license.git",
+  "repository": "https://github.com/adoyle-h/gulp-license.git",
   "scripts": {
     "prepublish": "./build.js",
     "codeclimate": "cat ./coverage/lcov.info|codeclimate",
